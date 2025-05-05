@@ -16,6 +16,8 @@ class MainMenuState extends MusicBeatState
 	var leftItem:FlxSprite;
 	var rightItem:FlxSprite;
 
+	var item:FlxSprite;
+    
 	var optionShit:Array<String> = ['freeplay', 'options'];
 
 	var magenta:FlxSprite;
@@ -67,7 +69,7 @@ class MainMenuState extends MusicBeatState
 
 		for (num => option in optionShit)
 		{
-			var item:FlxSprite = createMenuItem(option, 0, (num * 140) + 90);
+			item = createMenuItem(option, 0, (num * 140) + 90);
 			item.y += (4 - optionShit.length) * 70; // Offsets for when you have anything other than 4 items
 			item.screenCenter(X);
 		}
